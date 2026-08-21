@@ -99,6 +99,7 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
 
     button {
         flex-shrink: 0;
@@ -277,7 +278,7 @@ body {
     margin: 0;
     max-width: 800px;
     font-family: "New Caledonia LT Std", sans-serif;
-    font-size: clamp(58px, 5.2vw, 82px);
+    font-size: clamp(32px, 5.2vw, 62px);
     font-weight: 700;
     line-height: 0.98;
     letter-spacing: -2.5px;
