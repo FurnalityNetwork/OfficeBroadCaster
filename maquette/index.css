@@ -139,6 +139,9 @@ body {
     height: 60px;
     width: auto;
     vertical-align: middle;
+    margin-top : 1.25vh;
+    margin-right : -60px;
+    margin-left : -5px;
 }
 
 /*
