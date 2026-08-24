@@ -108,6 +108,7 @@ body {
         text-align: center;
         padding-right : 15px;
         padding-left : 15px;
+        padding : 25px;
     }
 }
 .menu {
@@ -387,7 +388,7 @@ hb {
     }
     .header button {
         font-size : 8px;
-        padding : 5px;
+        padding : 15px;
     }
     .logo img {
         width : clamp(80px, 20px, 70px);
@@ -400,7 +401,10 @@ hb {
         padding: 5px;
         height : calc(50vh - 80px);
     }
-    
+
+    .section1-left {
+        margin-left : 15px;
+    }
     .section1-left p {
         font-size: clamp(30px, 10vw, 60px);
     }
@@ -418,8 +422,9 @@ hb {
     }
     
     .section1-right {
+        margin-left : 20px;
         #section1_button2 {
-            margin-bottom : -40vh;
+            margin-bottom : -20vh;
         }
         p {
             margin-bottom : 5vh;
