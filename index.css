@@ -160,6 +160,7 @@ body {
     overflow: hidden;
     padding: 0 60px;
     box-sizing: border-box;
+    border-bottom : solid rgb(175, 175, 175) 0.5px;
 }
 
 #section1 {
@@ -194,7 +195,7 @@ body {
     padding: 12px 24px;
 }
 
-.section1-left p {
+#section1-left p {
     font-family: "New Caledonia LT Std", sans-serif;
     font-size: clamp(60px, 10vw, 140px);
     font-weight: 700;
@@ -205,7 +206,7 @@ body {
 }
 
 
-.section1-right {
+#section1-right {
     flex: 0.8;
     display: flex;
     flex-direction: column;
@@ -215,7 +216,7 @@ body {
     position: relative;
 }
 
-.section1-right p {
+#section1-right p {
     font-family: "New Caledonia LT Std", sans-serif;
     font-size: clamp(18px, 2.2vw, 28px);
     font-weight: 400;
@@ -238,7 +239,7 @@ body {
             ___SECTION 2___
 */
 
-#section2 {
+#section2, #section3, #section4 {
     width: 100.8%;
     min-height: 100vh;
     display: grid;
@@ -246,13 +247,11 @@ body {
     position: relative;
     overflow: hidden;
     padding: 40px 38px 80px 38px;
-    box-sizing: border-box;
     background: #fff;
     color: #000;
-    border : solid rgb(175, 175, 175) 0.5px;
 }
 
-.section2-left {
+#section2-left, #section3-left, #section4-left {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -260,7 +259,7 @@ body {
     position: relative;
 }
 
-.section2-left p {
+#section2-left p, #section3-left p, #section4-left p {
     margin: 0;
     font-family: "New Caledonia LT Std", sans-serif;
     font-size: 12px;
@@ -270,7 +269,7 @@ body {
     color: #000;
 }
 
-.section2-right {
+#section2-right, #section3-right, #section4-right {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,7 +278,7 @@ body {
     position: relative;
 }
 
-.section2-right h2 {
+#section2-right h2, #section3-right h2, #section4-right h2 {
     margin: 0;
     max-width: 800px;
     font-family: "New Caledonia LT Std", sans-serif;
@@ -290,7 +289,7 @@ body {
     color: #000;
 }
 
-.section2-right p {
+#section2-right p, #section4-right p {
     margin: 48px 0 0 0;
     max-width: 780px;
     font-family: "New Caledonia LT Std", sans-serif;
@@ -304,8 +303,61 @@ body {
 /*
           ___SECTION 3___
 */
+#section3 {
+    height : fit-content;
+}
 
+#section3-bottom {
+    width : 95vw;
+    height : 100vh;
+    margin-top : 50px;
 
+    /*
+    img:nth-child(n):nth-child(-n+3) {
+        max-width : 30vw;
+    }
+    */
+
+    /*
+    img {
+        overflow-y : hidden;
+        max-height: fit-content;
+        width : calc(10vw - 100px);
+    }
+    */
+    
+    img:nth-child(1) {
+        width : 35vw;
+    }
+    img:nth-child(2) {
+        width : 25vw;
+        position : relative;
+        bottom : 25px;
+    }
+    img:nth-child(3) {
+        width : 30vw;
+        align-self : flex-end;
+    }
+}
+
+/*
+          ___SECTION 4___
+*/
+
+#section4-right {
+    h2 {
+        border-bottom : solid grey 1px;
+    }
+    div {
+        display : flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    p {
+        max-width : 500px;
+        font-size: clamp(12px, 1.45vw, 20px);
+    }
+}
 
 /* Footer */
 footer {
@@ -402,10 +454,10 @@ hb {
         height : calc(50vh - 80px);
     }
 
-    .section1-left {
+    #section1-left {
         margin-left : 15px;
     }
-    .section1-left p {
+    #section1-left p {
         font-size: clamp(30px, 10vw, 60px);
     }
     
@@ -421,7 +473,7 @@ hb {
         letter-spacing: 2px;
     }
     
-    .section1-right {
+    #section1-right {
         margin-left : 20px;
         #section1_button2 {
             margin-bottom : -20vh;
@@ -431,49 +483,65 @@ hb {
         }
     }
 
-    #section2 {
-        min-height: calc(100vh - 120px);
+    #section2, #section3 {
+        max-height: calc(100vh - 120px);
         grid-template-columns: 1fr;
         gap: 45px;
         padding: 35px 20px 60px 20px;
     }
 
-    .section2-left {
+    #section2-left, #section3-left {
         padding-top: 0;
     }
 
-    .section2-right {
+    #section2-right, section3-right {
         padding-right: 0;
     }
 
-    .section2-right h2 {
+    #section2-right h2, #section3-right h2 {
         font-size: clamp(30px, 5vw, 30px);
         letter-spacing: -1.5px;
         line-height: 1;
     }
 
-    .section2-right p {
+    #section2-right p, #section3-right p {
         margin-top: 30px;
         font-size: clamp(17px, 4.5vw, 20px);
         line-height: 1.35;
     }
+
+    #section3 {
+        height : 20vh;
+    }
+
+    #section3 div:nth-child(2) {
+        margin-top : -25vh;
+    }
+
+    #section3 div:nth-child(3) {
+        margin-top : -40vh;
+    }
+
+    #section3 #section3-bottom, #section3 #section3-right, #section3 #section3-left {
+        height : 10vh;
+    }
 }
 
 @media screen and (max-width: 1024px) {
-    .section2 {
+    #section2 {
         grid-template-columns: 25% 75%;
         padding: 40px 30px 70px 30px;
     }
 
-    .section2-right {
+    #section2-right {
         padding-right: 20px;
     }
 
-    .section2-right h2 {
+    #section2-right h2 {
         font-size: clamp(30px, 5vw, 42px);
     }
 
-    .section2-right p {
+    #section2-right p {
         max-width : 80vw;
         margin-top: 38px;
         font-size: clamp(17px, 2.2vw, 22px);
